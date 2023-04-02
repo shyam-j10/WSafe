@@ -4,27 +4,18 @@ import { StyleSheet, View } from 'react-native';
 import * as Location from 'expo-location';
 
 export default function Map() {
-
   const[longitudeSet,setLongitude]=useState();
   const[latitudeSet,setLatitude]=useState()
   useEffect(()=>{
     (async () => {
-      
       let location = await Location.getCurrentPositionAsync({});
-      setLatitude(location.coords.latitude);
-       
+      setLatitude(location.coords.latitude); 
       setLongitude(location.coords.longitude); 
-
-       
-   
     })();
- 
    },[])
   
   return (
     <View style={styles.container}>
-
-    
       <MapView 
       style={styles.map}
         initialRegion={{
@@ -32,14 +23,9 @@ export default function Map() {
         longitude:76.9583,
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
-      }}
-      
-      >
-        <Marker title="college "   coordinate={{latitude:  10.9379, longitude: 76.9592}}  onDrag={e=>console.log(e.nativeEvent.coordinate)}>
-
-
-        </Marker>
-        <Circle   center={{latitude:  10.9379, longitude: 76.9592}}    radius = { 1000 }></Circle>
+      }}>
+        <Marker title="college "   coordinate={{latitude:  10.9379, longitude: 76.9592}}  onDrag={e=>console.log(e.nativeEvent.coordinate)}/>
+        <Circle center={{latitude:10.9379,longitude: 76.9592}} radius = {1000}/>
       </MapView>
     </View>
   );

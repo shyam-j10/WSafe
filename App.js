@@ -4,20 +4,15 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
 import 'react-native-gesture-handler';
 import Stack from './navigaiton/Stack';
-import VoiceHelp from './VoiceHelp';
+import VoiceHelp from './screen/VoiceHelp';
  
 
  
 export default function App() {
   return (
-      <VoiceHelp/>
-      // <NavigationContainer>
-     
-
-      //   <Stack />
-
- 
-      // </NavigationContainer>
+      <NavigationContainer>
+        <Stack />
+      </NavigationContainer>
     
   );
 }

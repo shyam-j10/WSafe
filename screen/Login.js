@@ -31,10 +31,7 @@ const Login = () => {
     }
   return (
     <SafeAreaView>
-
-        {/* <Image source={logo} />  */}
-        <Image
-         
+        <Image 
          source={logo}
          style={{height:400,width:400}}
         />

@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
  
 import Map from '../screen/Map';
+import Report from '../screen/Report';
  
 const TabNavigation = () => {
 
@@ -25,7 +26,8 @@ const TabNavigation = () => {
       
        />
         <Tab.Screen component={Profile} name='Profile' />
-        <Tab.Screen component={Map} name='Map' />
+        <Tab.Screen component={Report} name='Report' />
+        <Tab.Screen component={Map} name='Map'/>
 
     </Tab.Navigator>
   )
